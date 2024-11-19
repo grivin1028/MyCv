@@ -1,8 +1,8 @@
 /* General Styling */
 body {
   font-family: "Arial", sans-serif;
-  background-color: #f0f0f5;
-  color: #444;
+  background-color: #ceced3; /* Background putih */
+  color: #333;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -13,407 +13,107 @@ body {
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 1200px;
-  background-color: #ffffff;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Ukuran container lebih kecil */
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
 /* Left Side */
 .left-side {
-  width: 35%;
-  padding: 40px;
-  background-color: #2e4053;
-  color: #ecf0f1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box; /* Menambahkan box-sizing untuk perhitungan padding */
-}
-
-.left-side .banner {
+  width: 100%;
+  padding: 30px 20px;
+  background: #3b989b; /* Warna latar abu-abu terang untuk kontras */
+  color: #333;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.left-side .banner h2 {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: #e67e22;
-  margin-bottom: 10px;
-}
-
-.left-side .profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #e67e22;
-  margin-top: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
 }
 
 .left-side h1 {
-  margin-top: 20px;
-  font-size: 2.5em;
+  font-size: 2.2em;
   font-weight: bold;
-  color: #ecf0f1;
-  text-align: center;
+  margin-bottom: 10px;
+}
+
+.left-side h2 {
+  color: rgb(13, 13, 88); /* Warna biru untuk Welcome to My CV */
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.left-side .profile-img {
+  width: 200x; /* Ukuran gambar lebih kecil */
+  height: 200px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #aba8b3;
+  margin: 15px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.left-side .profile-img:hover {
+  transform: scale(1.1);
 }
 
 .left-side .subtitle {
-  font-size: 13px;
-  color: #bdc3c7;
+  font-size: 1rem;
+  color: #040a5a;
   margin-top: 10px;
-  text-align: center;
 }
 
-/* Social Media Section Styling */
-.social-media h3 {
-  font-size: 1.5em;
-  color: #e67e22;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+/* Social Media Section */
 .social-icons {
   display: flex;
   gap: 20px;
-  margin-top: 10px;
+  margin-top: 20px;
   justify-content: center;
 }
 
 .social-icon {
-  font-size: 1.5em;
-  color: #fff;
-  background-color: #2e4053;
+  font-size: 1.6em;
+  color: #140350;
+  background-color: #ffffff;
   border-radius: 50%;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, background-color 0.3s ease;
-  position: relative;
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
-
-.social-icon::before {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: -35px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #444;
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8em;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  white-space: nowrap;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.social-icon:hover::before {
-  opacity: 1;
-  transform: translate(-50%, 0);
 }
 
 .social-icon:hover {
-  background-color: #e67e22;
-  transform: scale(1.1);
+  background-color: #7e819100;
+  transform: scale(1.2);
 }
 
 /* Right Side */
 .right-side {
-  width: 65%;
-  padding: 40px;
-  background-color: #ecf0f1;
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #ffffff;
   box-sizing: border-box;
+  text-align: left;
 }
 
-.right-side h2,
-.right-side h3 {
-  color: #2e4053;
+.right-side h2 {
+  color: #1d3557;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  text-align: center;
 }
 
 .section-divider {
   width: 100%;
   height: 1px;
-  background-color: #bdc3c7;
-  margin: 30px 0;
-}
-
-/* About Me Section */
-.about-me {
-  font-size: 1.1em; /* Sesuaikan ukuran font di sini */
-  line-height: 1.6;
-  padding: 10px;
-}
-
-/* Skills Section */
-.skills ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.skills ul li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.skills ul li i {
-  font-size: 1.5em;
-  margin-right: 15px;
-  color: #e67e22;
-}
-
-/* Works Section */
-/* Works Section */
-.works {
-  padding: 40px 0;
-}
-
-.works h2 {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 20px;
-  color: #2e4053;
-  text-align: left;
-  margin-left: 20px;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.portfolio-item {
-  width: calc(50% - 20px);
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
-}
-
-.project-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.portfolio-item-content {
-  padding: 20px;
-  text-align: center;
-}
-
-.portfolio-item h3 {
-  font-size: 1.3;
-  color: #e67e22;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.portfolio-item p {
-  font-size: 1em;
-  color: #555555;
-  line-height: 1.5;
-}
-
-.portfolio-item a {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #e67e22;
-  color: white;
-  text-decoration: none;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
-}
-
-.portfolio-item a:hover {
-  background-color: #2e4053;
-}
-
-/* Contact Me Section */
-.contact-me {
-  background-color: #ecf0f1;
-  padding: 40px;
-  font-size: 1.1em;
-  border-radius: 8px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-top: 30px;
-}
-
-.contact-me h2 {
-  color: #2e4053;
-  text-align: center;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 10px;
-  font-size: 1em;
-  border: 1px solid #bdc3c7;
-  border-radius: 5px;
-  width: 100%;
-}
-
-.contact-form button {
-  padding: 10px 20px;
-  background-color: #e67e22;
-  color: #fff;
-  font-size: 1.1em;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #2e4053;
-}
-
-/* Responsiveness */
-@media (max-width: 1024px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .left-side,
-  .right-side {
-    width: 100%;
-  }
-
-  .left-side h1 {
-    font-size: 2.5em;
-  }
-
-  .social-icons {
-    gap: 15px;
-  }
-
-  .portfolio-item {
-    width: 45%; /* Menyesuaikan item portfolio untuk tablet */
-  }
-
-  .about-me {
-    font-size: 1em; /* Menyesuaikan ukuran font About Me */
-    margin-top: 20px;
-  }
-
-  .section-divider {
-    margin-top: 20px;
-  }
-
-  .contact-me {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    padding: 20px;
-  }
-
-  .left-side,
-  .right-side {
-    width: 100%;
-  }
-
-  .left-side h1 {
-    font-size: 2em;
-  }
-
-  .social-icons {
-    gap: 10px;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2em;
-  }
-
-  .portfolio-item {
-    width: 100%; /* Menjadikan item portfolio satu kolom di smartphone */
-    margin-bottom: 20px;
-  }
-
-  .about-me {
-    font-size: 0.9em;
-    margin-top: 15px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9em;
-  }
-
-  .section-divider {
-    margin-top: 15px;
-  }
-}
-
-@media (max-width: 480px) {
-  .left-side h1 {
-    font-size: 1.8em;
-  }
-
-  .left-side .profile-img {
-    width: 120px;
-    height: 120px;
-  }
-
-  .social-icon {
-    width: 35px;
-    height: 35px;
-    font-size: 1.1em;
-  }
-
-  .portfolio-item {
-    width: 100%; /* Portfolio items tetap satu kolom pada ponsel kecil */
-  }
-
-  .about-me {
-    font-size: 0.8em;
-    margin-top: 10px;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.9em;
-  }
-
-  .section-divider {
-    margin-top: 10px;
-  }
+  background-color: #625cb9;
+  margin: 25px 0;
 }
