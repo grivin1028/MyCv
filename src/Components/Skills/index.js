@@ -68,7 +68,7 @@ const Skills = () => {
             <i className="fab fa-html5" /> <span>HTML, CSS, JavaScript</span>
           </li>
           <li>
-            <i className="fab fa-react" /> <span>React Js, React Native</span>
+            <i className="fab fa-react" /> <span>React Js</span>
           </li>
           <li>
             <i className="fab fa-git-alt" /> <span>Git</span>

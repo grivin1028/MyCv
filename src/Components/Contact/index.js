@@ -6,13 +6,14 @@ const Contact = () => {
       <h3>Contact Me:</h3>
       <ul>
         <li>
-          <i className="fas fa-envelope" /> sergio.poli0904@gmail.com
+          <i className="fas fa-envelope" /> S22210426@student.unklab.ac.id
         </li>
         <li>
-          <i className="fas fa-phone-alt" /> +65 895 635 363 191
+          <i className="fas fa-phone-alt" /> +62 8015 4330 1051
         </li>
         <li>
-          <i className="fas fa-map-marker-alt" /> Manado, Indonesia
+          <i className="fas fa-map-marker-alt" /> Unklab, Airmadiri, Sulawesi
+          Utara, Indonesia
         </li>
       </ul>
     </section>

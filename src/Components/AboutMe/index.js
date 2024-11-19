@@ -1,4 +1,6 @@
 import React from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState, CSSProperties } from "react";
 
 const AboutMe = () => {
   return (

@@ -80,30 +80,21 @@ const Works = () => {
         <div className="portfolio">
           <div className="portfolio-item">
             <img
-              src="./images/alaise.png"
+              src="./image/projek2.png"
               alt="Visual Programming Project"
               className="project-img"
             />
-            <h3>Visual Programming</h3>
-            <p>Desktop Aplikasi Inventory Admin</p>
+            <h3>E-Busines</h3>
+            <p>InteriorKita, Toko tentang perabotan rumah tangga</p>
           </div>
           <div className="portfolio-item">
             <img
-              src="./images/tomatikweb.png"
+              src="./image/projek1.png"
               alt="Front-End Web Project"
               className="project-img"
             />
             <h3>Front-End Web</h3>
             <p>Tomatik, website informasi tentang tomat</p>
-          </div>
-          <div className="portfolio-item">
-            <img
-              src="./images/scifigame.jpeg"
-              alt="Unity 3D Game Project"
-              className="project-img"
-            />
-            <h3>Unity 3D Game</h3>
-            <p>Game FPS Shooter bertemakan sci-fi</p>
           </div>
         </div>
       </section>
