@@ -3,11 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { initializeApp } from "firebase/app"; // Import fungsi Firebase
-import firebaseConfig from "./firebaseConfig"; // Import konfigurasi Firebase
-
-// Inisialisasi Firebase
-initializeApp(firebaseConfig);
+import "./config/firebase"; // Import konfigurasi Firebase
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
