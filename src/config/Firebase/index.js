@@ -11,7 +11,7 @@ const firebaseConfig = {
   projectId: "mycv-f0f2e",
   storageBucket: "mycv-f0f2e.firebasestorage.app",
   messagingSenderId: "945927390202",
-  appId: "1:945927390202:web:8b8d0c7d73e0de530f5a43",
+  appId: "1:945927390202:web:8b8d0c7d73e0de530f5a43"
 };
 
 // Initialize Firebase

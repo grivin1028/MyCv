@@ -3,6 +3,17 @@ import { getDatabase, ref, onValue } from "firebase/database";
 import { useEffect, useState, CSSProperties } from "react";
 
 const AboutMe = () => {
+  const [about, setAboutMe] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const aboutRef = ref(db, "about");
+
+    onValue(aboutRef, (snapshot) => {
+      const data = snapshot.val();
+      setAboutMe(data);
+    });
+  }, []);
   return (
     <>
       <style>
@@ -52,13 +63,8 @@ const AboutMe = () => {
         `}
       </style>
       <section className="about-me fadeIn">
-        <h2>About Me</h2>
-        <p>
-          Saya adalah mahasiswa <b>Universitas Klabat</b>, prodi Sistem
-          Informasi tahun ajaran 2022. Saya memiliki ketertarikan besar pada
-          dunia teknologi informasi, pengembangan perangkat lunak, dan inovasi
-          digital.
-        </p>
+        <h2>{about.title}</h2>
+        <p>{about.subtile}</p>
       </section>
     </>
   );
