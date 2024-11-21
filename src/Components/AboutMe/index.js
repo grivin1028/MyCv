@@ -64,7 +64,7 @@ const AboutMe = () => {
       </style>
       <section className="about-me fadeIn">
         <h2>{about.title}</h2>
-        <p>{about.subtile}</p>
+        <p>{about.subtitle}</p>
       </section>
     </>
   );

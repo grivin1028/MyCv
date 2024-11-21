@@ -1,6 +1,23 @@
 import React from "react";
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
 
 const Works = () => {
+  const [works, setWorks] = useState(null);
+
+  useEffect(() => {
+    const db = getDatabase();
+    const worksRef = ref(db, "works");
+    onValue(worksRef, (snapshot) => {
+      const data = snapshot.val();
+      setWorks(data);
+    });
+  }, []);
+
+  if (!works) {
+    return <p>Loading...</p>; // Tampilkan saat data belum termuat
+  }
+
   return (
     <>
       <style>
@@ -76,25 +93,25 @@ const Works = () => {
         `}
       </style>
       <section className="works fadeIn">
-        <h2>My Projects</h2>
+        <h2>{works.title}</h2>
         <div className="portfolio">
           <div className="portfolio-item">
             <img
-              src="./image/projek2.png"
-              alt="Visual Programming Project"
+              src={`data:image/jpeg;base64, ${works.g1}`}
+              alt="E-Business Project"
               className="project-img"
             />
-            <h3>E-Busines</h3>
-            <p>InteriorKita, Toko tentang perabotan rumah tangga</p>
+            <h3>{works.p1}</h3>
+            <p>{works.p1j}</p>
           </div>
           <div className="portfolio-item">
             <img
-              src="./image/projek1.png"
+              src={`data:image/jpeg;base64, ${works.g2}`}
               alt="Front-End Web Project"
               className="project-img"
             />
-            <h3>Front-End Web</h3>
-            <p>Tomatik, website informasi tentang tomat</p>
+            <h3>{works.p2}</h3>
+            <p>{works.p2j}</p>
           </div>
         </div>
       </section>

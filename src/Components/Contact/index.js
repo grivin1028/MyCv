@@ -16,7 +16,7 @@ const Contact = () => {
 
   return (
     <section className="contact-info fadeIn">
-      <h3>Contact Me:</h3>
+      <h3>{contactInfo.title}</h3>
       <ul>
         <li>
           <i className="fas fa-envelope" /> {contactInfo.email}
@@ -25,7 +25,7 @@ const Contact = () => {
           <i className="fas fa-phone-alt" /> {contactInfo.phone}
         </li>
         <li>
-          <i className="fas fa-map-marker-alt" /> {contactInfo.address}
+          <i className="fas fa-map-marker-alt" /> {contactInfo.addrest}
         </li>
       </ul>
     </section>
